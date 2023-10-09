@@ -19,8 +19,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Paso 4: Función para agregar productos al carrito
+    let totalCarrito = 0;
     function agregarAlCarrito() {
-        // Completar esta función para agregar productos al carrito
+        const cantidad = parseInt(cantidadInput.value);
+        const subtotal = precioProducto * cantidad;
+
+        const listItem = document.createElement("li");
+        listItem.textContent = `Producto 1 x${cantidad} - Subtotal: $${subtotal}`;
+
+        listaCarrito.appendChild(listItem);
+
+        totalCarrito += subtotal;
+        totalSpan.textContent = `$${totalCarrito}`;
+        cantidadInput.value = "1";
+
+        subtotalSpan.textContent = `$${precioProducto}`;
     }
 
     // Paso 5: Función para calcular el total del carrito
