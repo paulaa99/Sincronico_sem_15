@@ -29,15 +29,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         listaCarrito.appendChild(listItem);
 
+       
+    }
+
+    // Paso 5: Función para calcular el total del carrito
+    function calcularTotalCarrito() {
+        
         totalCarrito += subtotal;
         totalSpan.textContent = `$${totalCarrito}`;
         cantidadInput.value = "1";
 
         subtotalSpan.textContent = `$${precioProducto}`;
-    }
-
-    // Paso 5: Función para calcular el total del carrito
-    function calcularTotalCarrito() {
+        
         // Completar esta función para calcular el total del carrito
     }
 });
