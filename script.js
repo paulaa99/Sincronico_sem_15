@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Paso 3: Función para calcular el subtotal en tiempo real
     function calcularSubtotal() {
-        // Completar esta función para calcular el subtotal
+        const cantidad = parseInt(cantidadInput.value);
+        const subtotal = precioProducto * cantidad;
+        subtotalSpan.textContent = `$${subtotal.toFixed(2)}`;
     }
 
     // Paso 4: Función para agregar productos al carrito
